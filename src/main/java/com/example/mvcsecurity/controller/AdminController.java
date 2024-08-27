@@ -11,6 +11,6 @@ public class AdminController {
 
     @GetMapping
     public String showAdminPage(Model model) {
-        return "admin/admin";
+        return "users";
     }
 }

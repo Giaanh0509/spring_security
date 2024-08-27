@@ -28,7 +28,7 @@ public class MySecurity {
         httpSecurity.authorizeHttpRequests(
                 configurer -> configurer
                         .requestMatchers("/public/**").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/admin/**").permitAll()
                         .requestMatchers("/manager/**").hasAnyRole("ADMIN", "MANAGER")
                         .requestMatchers("/teacher/**").hasAnyRole("ADMIN", "MANAGER", "TEACHER")
                         .requestMatchers("/home/**").hasAnyRole("ADMIN", "MANAGER", "TEACHER")
